@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Status | Lunar Tech</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="index.html"
+          >LUNAR<span class="text-neon">TECH</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="status.html">Status</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="status-header text-center">
+      <div id="particles-status"></div>
+      <div class="container position-relative">
+        <h1 class="display-3 fw-bold">
+          Track Your <span class="text-neon">Project</span>
+        </h1>
+        <p class="lead opacity-75 mx-auto mb-5" style="max-width: 600px">
+          Pantau progres perakitan, maintenance, atau instalasi server Anda
+          secara real-time.
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <form id="trackForm" class="search-box">
+              <input
+                type="text"
+                id="invoiceInput"
+                placeholder="Masukkan ID Invoice (Contoh: LTECH-2026XYZ)"
+                autocomplete="off"
+                required
+              />
+              <button type="submit" class="btn btn-futuristic search-btn">
+                <i class="bi bi-search me-2"></i> Lacak
+              </button>
+            </form>
+            <p class="small opacity-50 mt-3">
+              *Coba ketik <b>LTECH-2026PC</b>, <b>LTECH-2026SV</b>, atau
+              <b>LTECH-DONE</b> untuk simulasi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container mt-5 mb-5 pb-5" id="trackingResult">
+      <div class="glass-card p-4 p-md-5 border-neon">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-center border-bottom border-secondary pb-4 mb-4"
+        >
+          <div>
+            <h5 class="opacity-75 mb-1">Status Pengerjaan Untuk:</h5>
+            <h2 class="text-neon fw-bold mb-0" id="resInvoice">LTECH-XXXXX</h2>
+          </div>
+          <div class="mt-3 mt-md-0 text-md-end">
+            <span
+              class="badge bg-primary px-3 py-2 fs-6 rounded-pill"
+              id="resBadge"
+              >In Progress</span
+            >
+          </div>
+        </div>
+
+        <div class="timeline" id="timelineContainer">
+          <div class="timeline-progress" id="timelineProgress"></div>
+
+          <div class="timeline-step step-item">
+            <div class="timeline-icon"><i class="bi bi-receipt"></i></div>
+            <div class="timeline-label">Order<br />Confirmed</div>
+          </div>
+          <div class="timeline-step step-item">
+            <div class="timeline-icon"><i class="bi bi-box-seam"></i></div>
+            <div class="timeline-label">Preparation &<br />Diagnosing</div>
+          </div>
+          <div class="timeline-step step-item">
+            <div class="timeline-icon"><i class="bi bi-cpu"></i></div>
+            <div class="timeline-label">Execution<br />in Progress</div>
+          </div>
+          <div class="timeline-step step-item">
+            <div class="timeline-icon"><i class="bi bi-speedometer"></i></div>
+            <div class="timeline-label">Stress Test<br />& QC</div>
+          </div>
+          <div class="timeline-step step-item">
+            <div class="timeline-icon"><i class="bi bi-check-circle"></i></div>
+            <div class="timeline-label">Ready /<br />Delivered</div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4 pt-3 border-top border-secondary">
+          <div class="col-md-4">
+            <span class="d-block small opacity-50 mb-1">Layanan</span>
+            <span class="d-block fw-bold" id="resService">Mencari data...</span>
+          </div>
+          <div class="col-md-4">
+            <span class="d-block small opacity-50 mb-1">Teknisi (PIC)</span>
+            <span class="d-block fw-bold" id="resPic">Mencari data...</span>
+          </div>
+          <div class="col-md-4">
+            <span class="d-block small opacity-50 mb-1">Estimasi Selesai</span>
+            <span class="d-block fw-bold text-neon" id="resDate"
+              >Mencari data...</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-4 p-md-5 border-secondary mt-5">
+        <h4 class="mb-4">
+          <i class="bi bi-journal-text text-neon me-2"></i> Riwayat Aktivitas
+          Teknisi
+        </h4>
+        <div class="table-responsive">
+          <table class="table table-dark table-futuristic mb-0">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Tanggal & Waktu</th>
+                <th>Aktivitas Pengerjaan</th>
+                <th>Status</th>
+                <th>Teknisi / PIC</th>
+              </tr>
+            </thead>
+            <tbody id="logTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="opacity-75 mb-2">
+          Ada pertanyaan mengenai detail pengerjaan Anda?
+        </p>
+        <a
+          href="https://wa.me/6200000000"
+          target="_blank"
+          class="btn btn-outline-light rounded-pill px-4"
+        >
+          <i class="bi bi-headset me-2"></i> Hubungi Helpdesk
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-center mt-5 pt-3">
+      <div class="container border-top border-secondary pt-4 pb-4">
+        <p class="mb-2">LUNAR TECH & PC SOLUTIONS</p>
+        <p class="mb-0 opacity-50 small">
+          &copy; 2026 UTS Pemrograman Web (F) | Muhammad Zainal Arifin | NPM
+          24081010068
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+      // Config Partikel
+      particlesJS("particles-status", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: "#00f2fe" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#00f2fe",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      // tracking simjlasi
+      const trackForm = document.getElementById("trackForm");
+      const trackingResult = document.getElementById("trackingResult");
+      const progressLine = document.getElementById("timelineProgress");
+      const steps = document.querySelectorAll(".step-item");
+      const logTableBody = document.getElementById("logTableBody");
+
+      trackForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const inputVal = document
+          .getElementById("invoiceInput")
+          .value.trim()
+          .toUpperCase();
+        if (!inputVal) return;
+
+        trackingResult.style.display = "none";
+        progressLine.style.width = "0%";
+        progressLine.style.height = "0%";
+        steps.forEach((step) => step.classList.remove("active", "completed"));
+
+        // Variabel Mock Data Utama
+        let serviceName = "Custom PC - Developer Workstation";
+        let pic = "Mr. Nobody";
+        let estDate = "18 April 2026";
+        let currentStepIndex = 2;
+        let badgeText = "In Progress";
+        let badgeClass = "bg-primary";
+        let logHTML = "";
+
+        // Deteksi Resi & Pembuatan Data Tabel Dinamis
+        if (inputVal.includes("SV") || inputVal.includes("SERVER")) {
+          serviceName = "Server - SAMP Roleplay Deployment";
+          pic = "Tim Infrastruktur";
+          currentStepIndex = 3;
+          logHTML = `
+            <tr><td>1</td><td>08/04/2026 09:30</td><td>Pesanan & pembayaran diterima sistem</td><td><span class="text-success fw-bold">SELESAI</span></td><td>System Admin</td></tr>
+            <tr><td>2</td><td>08/04/2026 11:00</td><td>Deployment script & database setup di VPS</td><td><span class="text-success fw-bold">SELESAI</span></td><td>Tim Infrastruktur</td></tr>
+            <tr><td>3</td><td>09/04/2026 14:00</td><td>Menjalankan stress test beban traffic layer 7</td><td><span class="text-warning fw-bold">PROSES</span></td><td>Tim Infrastruktur</td></tr>
+          `;
+        } else if (inputVal.includes("DONE") || inputVal.includes("SELESAI")) {
+          serviceName = "Hardware Repair - Deep Cleaning";
+          pic = "Jessica Kimberly";
+          currentStepIndex = 4;
+          badgeText = "Completed";
+          badgeClass = "bg-success";
+          estDate = "Selesai (Sudah Diambil)";
+          logHTML = `
+            <tr><td>1</td><td>05/04/2026 10:00</td><td>Perangkat diterima oleh Admin Workshop</td><td><span class="text-success fw-bold">SELESAI</span></td><td>System Admin</td></tr>
+            <tr><td>2</td><td>05/04/2026 14:00</td><td>Proses diagnosa awal hardware & thermal test</td><td><span class="text-success fw-bold">SELESAI</span></td><td>Tim Infrastruktur</td></tr>
+            <tr><td>3</td><td>06/04/2026 09:00</td><td>Pembersihan debu & penggantian liquid metal</td><td><span class="text-success fw-bold">SELESAI</span></td><td>Tim Infrastruktur</td></tr>
+            <tr><td>4</td><td>06/04/2026 17:00</td><td>Stress test 24 jam lulus. Perangkat siap diambil.</td><td><span class="text-success fw-bold">SELESAI</span></td><td>System QC</td></tr>
+          `;
+        } else if (inputVal.includes("PC")) {
+          serviceName = "Custom PC - All-White Aesthetic";
+          pic = "Tim Perakitan";
+          currentStepIndex = 1;
+          logHTML = `
+            <tr><td>1</td><td>10/04/2026 08:00</td><td>Konfirmasi pesanan PC & DP diterima</td><td><span class="text-success fw-bold">SELESAI</span></td><td>System Admin</td></tr>
+            <tr><td>2</td><td>10/04/2026 10:30</td><td>Pengecekan ketersediaan part / proses Indent</td><td><span class="text-warning fw-bold">PROSES</span></td><td>Tim Perakitan</td></tr>
+          `;
+        } else {
+          // Default jika ngetik ngawur
+          logHTML = `
+            <tr><td>1</td><td>08/04/2026 09:30</td><td>Pesanan berhasil masuk ke sistem antrian</td><td><span class="text-success fw-bold">SELESAI</span></td><td>System Admin</td></tr>
+            <tr><td>2</td><td>08/04/2026 11:00</td><td>Teknisi mulai melakukan eksekusi/perakitan</td><td><span class="text-warning fw-bold">PROSES</span></td><td>Mr. Nobody</td></tr>
+          `;
+        }
+
+        // Tampilkan Box & Isi HTML
+        trackingResult.style.display = "block";
+        document.getElementById("resInvoice").innerText = inputVal;
+        document.getElementById("resService").innerText = serviceName;
+        document.getElementById("resPic").innerText = pic;
+        document.getElementById("resDate").innerText = estDate;
+        logTableBody.innerHTML = logHTML;
+
+        const badgeEl = document.getElementById("resBadge");
+        badgeEl.innerText = badgeText;
+        badgeEl.className = `badge ${badgeClass} px-3 py-2 fs-6 rounded-pill`;
+
+        // Anim Stepper
+        setTimeout(() => {
+          const isMobile = window.innerWidth <= 768;
+          const progressPercent = (currentStepIndex / (steps.length - 1)) * 100;
+
+          if (isMobile) {
+            progressLine.style.width = "2px";
+            progressLine.style.height = progressPercent + "%";
+          } else {
+            progressLine.style.height = "2px";
+            progressLine.style.width = progressPercent * 0.8 + "%";
+          }
+
+          steps.forEach((step, index) => {
+            if (index < currentStepIndex) {
+              step.classList.add("completed");
+            } else if (index === currentStepIndex) {
+              step.classList.add("active");
+            }
+          });
+        }, 150);
+      });
+    </script>
+  </body>
+</html>

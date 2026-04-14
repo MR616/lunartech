@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Lunar Tech</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="index.html"
+          >LUNAR<span class="text-neon">TECH</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="status.html">Status</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="gallery-header text-center">
+      <div id="particles-gallery"></div>
+      <div class="container position-relative">
+        <h1 class="display-3 fw-bold">
+          Our <span class="text-neon">Masterpieces</span>
+        </h1>
+        <p class="lead opacity-75 mx-auto" style="max-width: 700px">
+          Menampilkan portofolio karya presisi, manajemen kabel tanpa kompromi,
+          dan estetika performa dari Lunar Tech.
+        </p>
+      </div>
+    </header>
+
+    <section class="container mt-4 mb-5 text-center">
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <button class="btn btn-futuristic filter-btn active" data-filter="all">
+          All Projects
+        </button>
+        <button
+          class="btn btn-outline-light filter-btn"
+          data-filter="pc-builds"
+        >
+          Custom PC Builds
+        </button>
+        <button class="btn btn-outline-light filter-btn" data-filter="server">
+          Server & Network
+        </button>
+        <button class="btn btn-outline-light filter-btn" data-filter="repair">
+          Maintenance & Repair
+        </button>
+      </div>
+
+      <div class="row g-4" id="galleryGrid">
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80"
+              alt="RGB Gaming Rig"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Orion</h5>
+              <p class="small mb-0">High-End 4K Gaming Rig dengan RGB Sync</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80"
+              alt="Minimalist Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Eclipse</h5>
+              <p class="small mb-0">Stealth/Minimalist Workstation Tanpa RGB</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=600&q=80"
+              alt="White Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Snowfall</h5>
+              <p class="small mb-0">All-White Themed Build + Liquid Cooling</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1724167805914-8a6d3ba0b850?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              alt="Creator Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Canvas</h5>
+              <p class="small mb-0">3D Rendering & Video Editing Workstation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80"
+              alt="Mini ITX"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Nano</h5>
+              <p class="small mb-0">Mini-ITX SFF Build untuk Mobilitas</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=600&q=80"
+              alt="Watercooled Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Leviathan</h5>
+              <p class="small mb-0">Custom Hard-Tube Liquid Cooling Loop</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?auto=format&fit=crop&w=600&q=80"
+              alt="Open Frame"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Zenith</h5>
+              <p class="small mb-0">Open Frame Wall-Mounted Chassis</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1636488363148-818c08eec89e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0"
+              alt="Dual System"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Titan</h5>
+              <p class="small mb-0">Dual-System PC (Gaming + Streaming)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=600&q=80"
+              alt="AMD Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Crimson</h5>
+              <p class="small mb-0">Full AMD Red-Team Setup Optimization</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="pc-builds">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+              alt="HTPC Build"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Project: Cinema</h5>
+              <p class="small mb-0">Home Theater PC (HTPC) Living Room Setup</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80"
+              alt="Server Rack"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Data Center Node</h5>
+              <p class="small mb-0">
+                Instalasi infrastruktur jaringan & rack server
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+              alt="Motherboard Server"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Home NAS Setup</h5>
+              <p class="small mb-0">
+                Konfigurasi Network Attached Storage (NAS)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661765192121-f398fd1e8fa2?w=500&auto=format&fit=crop&q=60"
+              alt="Network Cables"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Office LAN Routing</h5>
+              <p class="small mb-0">Manajemen kabel UTP & Switch Hub setup</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80"
+              alt="Server Lights"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">SAMP Game Server</h5>
+              <p class="small mb-0">
+                Deployment Dedicated Server Roleplay 24/7
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1664297989345-f4ff2063b212?w=500&auto=format&fit=crop&q=60"
+              alt="Code Server"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Discord Bot Hosting</h5>
+              <p class="small mb-0">Linux VPS Config untuk Python/NodeJS Bot</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661758351472-52ed02e99496?w=500&auto=format&fit=crop&q=60"
+              alt="Database"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Database Migration</h5>
+              <p class="small mb-0">Optimasi dan pemindahan MySQL/MariaDB</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=600&q=80"
+              alt="Tech Cloud"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Plex Media Server</h5>
+              <p class="small mb-0">Personal Cloud & Media Streaming Engine</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80"
+              alt="Global Network"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">VPN & Remote Desktop</h5>
+              <p class="small mb-0">
+                Routing keamanan jaringan kantor jarak jauh
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
+              alt="CCTV Server"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">CCTV NVR Setup</h5>
+              <p class="small mb-0">
+                Penyimpanan sistem keamanan & RAID Config
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="server">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+              alt="Web Server"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Web Server Deployment</h5>
+              <p class="small mb-0">
+                Konfigurasi Apache/Nginx untuk website portal
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80"
+              alt="Laptop Repair"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Hardware Resurrection</h5>
+              <p class="small mb-0">Perbaikan total komponen motherboard IC</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=600&q=80"
+              alt="Thermal Paste"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Premium Repasting</h5>
+              <p class="small mb-0">
+                Aplikasi Liquid Metal untuk pendinginan maksimal
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&fit=crop&w=600&q=80"
+              alt="Dirty Dust Cleaning"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Extreme Dust Removal</h5>
+              <p class="small mb-0">
+                Pembersihan sirkulasi udara & heatsink PC lama
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1736457833735-a24989a1270f?w=500&auto=format&fit=crop&q=60"
+              alt="Cable Management"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Cable Management Rework</h5>
+              <p class="small mb-0">
+                Menyusun ulang rute kabel kusut jadi estetis
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80"
+              alt="GPU Repair"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">GPU Fan Replacement</h5>
+              <p class="small mb-0">
+                Penggantian bearing kipas VGA Card yang aus
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1580522154071-c6ca47a859ad?auto=format&fit=crop&w=600&q=80"
+              alt="SSD Upgrade"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">SSD NVMe Migration</h5>
+              <p class="small mb-0">
+                Kloning OS dari HDD lama ke SSD NVMe super cepat
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1622745797193-39307a84be22?w=500&auto=format&fit=crop&q=60"
+              alt="Broken Screen"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">LCD Screen Fix</h5>
+              <p class="small mb-0">
+                Penggantian panel layar laptop dead pixel
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=600&q=80"
+              alt="Keyboard Repair"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Keyboard & Hinge Fabrication</h5>
+              <p class="small mb-0">
+                Perbaikan engsel laptop patah dan tuts keyboard
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80"
+              alt="PSU Diagnostics"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Power Supply Diagnostic</h5>
+              <p class="small mb-0">
+                Pengecekan voltase PSU penyebab Blue Screen
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 gallery-item" data-category="repair">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1679501072696-9e7c538d71f9?w=500&auto=format&fit=crop&q=60"
+              alt="Water damage"
+            />
+            <div class="gallery-overlay text-start">
+              <h5 class="mb-1 text-neon">Water Damage Sonic Bath</h5>
+              <p class="small mb-0">
+                Pembersihan korosi akibat air kopi / tumpahan cair
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5 pt-5 border-top border-secondary">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">
+          The <span class="text-neon">Transformation</span>
+        </h2>
+        <p class="opacity-75">
+          Bukti nyata dari dedikasi kami dalam Deep Cleaning dan Cable
+          Management.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-center justify-content-center">
+        <div class="col-md-5">
+          <div class="glass-card position-relative p-2">
+            <span
+              class="badge tag-before position-absolute top-0 start-0 m-3 px-3 py-2 fs-6"
+              style="z-index: 10"
+              >BEFORE</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1733650412870-fc2d64b52343?w=500&auto=format&fit=crop&q=60"
+              class="img-fluid rounded-3"
+              alt="Dirty PC Before"
+            />
+            <div class="p-3 text-center">
+              <p class="small opacity-75 mb-0">
+                Penumpukan debu ekstrem & manajemen kabel yang menghambat
+                sirkulasi udara.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 text-center d-none d-md-block">
+          <i
+            class="bi bi-arrow-right-circle text-neon"
+            style="font-size: 3rem"
+          ></i>
+        </div>
+
+        <div class="col-md-5">
+          <div
+            class="glass-card position-relative p-2"
+            style="border-color: var(--neon-blue)"
+          >
+            <span
+              class="badge tag-after position-absolute top-0 start-0 m-3 px-3 py-2 fs-6"
+              style="z-index: 10"
+              >AFTER</span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=600&q=80"
+              class="img-fluid rounded-3"
+              alt="Clean PC After"
+            />
+            <div class="p-3 text-center">
+              <p class="small text-neon mb-0">
+                Deep Cleaning, Repasting, & Cable Rerouting selesai dilakukan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5 pt-5 mb-5">
+      <h3 class="text-center mb-4">
+        Lunar <span class="text-neon">Community Setups</span>
+      </h3>
+      <p class="text-center opacity-75 mb-5">
+        Bergabunglah dengan ratusan klien kami yang sudah memiliki *workspace*
+        impian mereka.
+      </p>
+
+      <div class="row g-3">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 1"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 2"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 3"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 4"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 5"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1696710257827-75e2e5954059?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2V0dXAlMjBwYyUyRmxhcHRvcCUyRnBzfGVufDB8fDB8fHww"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 6"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 7"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1599792215800-042be231c6cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2V0dXAlMjBwYyUyRmxhcHRvcCUyRnBzJTIwZ2FtaW5nfGVufDB8fDB8fHww"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 8"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1775410633007-a78d0329bbc5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2V0dXAlMjBwYyUyRmxhcHRvcCUyRnBzJTIwZ2FtaW5nfGVufDB8fDB8fHww"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 9"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1637944059066-81c8eb0f7c02?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 10"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1597049176495-60ca7846c7ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 11"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1599311524481-52e3fe140005?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 12"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 13"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 14"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1636488363148-818c08eec89e?auto=format&fit=crop&w=800&q=80"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 15"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1764702276801-86fedea38ae4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 16"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1764688004432-1fc8e7549ce2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 17"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1764702243672-f5da38b0dffa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 18"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1621604232398-9efc41554e40?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 19"
+          />
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <img
+            src="https://images.unsplash.com/photo-1775410633801-5d7997f795c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fHNldHVwJTIwcGMlMkZsYXB0b3AlMkZwcyUyMGdhbWluZ3xlbnwwfHwwfHx8MA%3D%3D"
+            class="setup-img rounded-4 shadow-lg border border-secondary"
+            alt="Setup 20"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container text-center mt-5 pt-3 mb-5">
+      <div class="glass-card p-5 border-neon">
+        <h2 class="mb-3">Terinspirasi dengan Karya Kami?</h2>
+        <p class="opacity-75 mb-4">
+          Wujudkan PC impian atau infrastruktur ideal Anda bersama teknisi
+          terbaik kami hari ini.
+        </p>
+        <a href="order.html" class="btn btn-futuristic btn-lg px-5 shadow-lg"
+          >Mulai Konsultasi & Booking <i class="bi bi-arrow-right ms-2"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer class="text-center mt-5 pt-3">
+      <div class="container border-top border-secondary pt-4 pb-4">
+        <p class="mb-2">LUNAR TECH & PC SOLUTIONS</p>
+        <p class="mb-0 opacity-50 small">
+          &copy; 2026 UTS Pemrograman Web (F) | Muhammad Zainal Arifin | NPM
+          24081010068
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+      // 1. Inisialisasi Partikel
+      particlesJS("particles-gallery", {
+        particles: {
+          number: {
+            value: 50 /* Dibuat sedikit lebih sedikit dari halaman depan agar tidak terlalu ramai */,
+            density: { enable: true, value_area: 800 },
+          },
+          color: { value: "#00f2fe" },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.5,
+            random: false,
+          },
+          size: {
+            value: 3,
+            random: true,
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#00f2fe",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => {
+            b.classList.remove("active", "btn-futuristic");
+            b.classList.add("btn-outline-light");
+          });
+
+          btn.classList.remove("btn-outline-light");
+          btn.classList.add("active", "btn-futuristic");
+
+          const filterValue = btn.getAttribute("data-filter");
+
+          galleryItems.forEach((item) => {
+            if (
+              filterValue === "all" ||
+              item.getAttribute("data-category") === filterValue
+            ) {
+              item.style.display = "block";
+              setTimeout(() => {
+                item.style.opacity = "1";
+                item.style.transform = "scale(1)";
+              }, 50);
+            } else {
+              item.style.opacity = "0";
+              item.style.transform = "scale(0.8)";
+              setTimeout(() => {
+                item.style.display = "none";
+              }, 400);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

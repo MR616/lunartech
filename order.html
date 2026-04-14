@@ -1,0 +1,1832 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Service | Lunar Tech</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="index.html"
+          >LUNAR<span class="text-neon">TECH</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="order.html">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="status.html">Status</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="order-header text-center">
+      <div id="particles-order"></div>
+      <div class="container position-relative">
+        <h1 class="display-3 fw-bold">
+          Start Your <span class="text-neon">Project</span>
+        </h1>
+        <p class="lead opacity-75 mx-auto" style="max-width: 700px">
+          Katalog spesifikasi terlengkap. Pilih kategori, tentukan spesifikasi
+          layanan, dan dapatkan estimasi harga instan. Tim kami siap
+          mengeksekusinya.
+        </p>
+      </div>
+    </header>
+
+    <div class="container mt-4 mb-5">
+      <form id="orderForm">
+        <h4 class="mb-3">
+          <span class="text-neon">Step 1:</span> Pilih Kategori Layanan
+        </h4>
+        <ul
+          class="nav nav-pills nav-fill gap-2 p-1 small glass-card mb-5 rounded-4"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link cat-btn w-100 active"
+              id="pills-pc-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-pc"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-pc-display d-block fs-4 mb-1"></i> Custom PC
+              Assembly
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link cat-btn w-100"
+              id="pills-server-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-server"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-hdd-network d-block fs-4 mb-1"></i> Server &
+              Network
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link cat-btn w-100"
+              id="pills-tuning-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-tuning"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-speedometer2 d-block fs-4 mb-1"></i> System Tuning
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link cat-btn w-100"
+              id="pills-repair-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-repair"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-tools d-block fs-4 mb-1"></i> Hardware Repair
+            </button>
+          </li>
+        </ul>
+
+        <h4 class="mb-3">
+          <span class="text-neon">Step 2:</span> Pilih Spesifikasi Layanan
+          (Pilih Lebih Dari Satu)
+        </h4>
+        <div class="tab-content mb-5" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-pc" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc1"
+                  value="Entry Office PC"
+                  data-price="3500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc1"
+                  ><h6 class="mb-1">1. Entry Office / Admin PC</h6>
+                  <span class="desc-spec opacity-50"
+                    >Intel Core i3-10100, H410M, 8GB DDR4 2666MHz, 256GB SSD
+                    SATA, PSU 400W 80+ Standard.</span
+                  ><span class="text-neon fw-bold small">Rp 3.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc2"
+                  value="Student APU Build"
+                  data-price="4500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc2"
+                  ><h6 class="mb-1">2. Student Learn & Play PC</h6>
+                  <span class="desc-spec opacity-50"
+                    >AMD Ryzen 5 4600G APU, A320M, 16GB (2x8) DDR4 3200MHz,
+                    512GB NVMe, PSU 400W.</span
+                  ><span class="text-neon fw-bold small">Rp 4.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc3"
+                  value="Home Theater PC"
+                  data-price="5500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc3"
+                  ><h6 class="mb-1">3. Home Theater PC (HTPC)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 5 5600G, B450 ITX, 16GB 3200MHz, 512GB NVMe, Casing
+                    InWin Chopin Ultra Silent.</span
+                  ><span class="text-neon fw-bold small">Rp 5.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc4"
+                  value="1080p Casual Gaming"
+                  data-price="7500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc4"
+                  ><h6 class="mb-1">4. 1080p Casual Gaming</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i3-12100F, H610M, 16GB DDR4, 512GB NVMe Gen3, NVIDIA
+                    GTX 1660 Super 6GB.</span
+                  ><span class="text-neon fw-bold small">Rp 7.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc5"
+                  value="Esport Competitive 144Hz"
+                  data-price="9500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc5"
+                  ><h6 class="mb-1">5. Esport Competitive 144Hz</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 5 5600, B550M, 16GB DDR4 3200MHz, 1TB NVMe, NVIDIA
+                    RTX 3060 12GB GDDR6.</span
+                  ><span class="text-neon fw-bold small">Rp 9.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc6"
+                  value="1440p Sweet-Spot Gaming"
+                  data-price="14500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc6"
+                  ><h6 class="mb-1">6. 1440p Sweet-Spot Gaming</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i5-12400F, B660M, 32GB DDR4, 1TB NVMe Gen4, NVIDIA RTX
+                    4060 Ti 8GB DLSS 3.</span
+                  ><span class="text-neon fw-bold small">Rp 14.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc7"
+                  value="1440p High-End Gaming"
+                  data-price="20000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc7"
+                  ><h6 class="mb-1">7. 1440p High-End Gaming</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 5 7600X, B650M, 32GB DDR5 6000MHz, 1TB NVMe Gen4, RTX
+                    4070 Super 12GB.</span
+                  ><span class="text-neon fw-bold small">Rp 20.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc8"
+                  value="4K Ultra AAA Gaming"
+                  data-price="30000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc8"
+                  ><h6 class="mb-1">8. 4K Ultra AAA Gaming</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 7 7800X3D, X670E, 32GB DDR5 6000MHz, 2TB NVMe Gen4,
+                    RTX 4080 Super 16GB.</span
+                  ><span class="text-neon fw-bold small">Rp 30.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc9"
+                  value="Enthusiast 4K VR Ready"
+                  data-price="55000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc9"
+                  ><h6 class="mb-1">9. Enthusiast 4K / VR Ready</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i9-14900K, Z790, 64GB DDR5 6400MHz, 4TB NVMe Gen5,
+                    NVIDIA RTX 4090 24GB.</span
+                  ><span class="text-neon fw-bold small">Rp 55.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc10"
+                  value="Content Creator Base"
+                  data-price="12000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc10"
+                  ><h6 class="mb-1">10. Content Creator Base</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 7 5700X, B550, 32GB DDR4 3600MHz, 1TB NVMe, RTX 3060
+                    (Cuda Optimized).</span
+                  ><span class="text-neon fw-bold small">Rp 12.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc11"
+                  value="Pro Video Editor 4K"
+                  data-price="25000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc11"
+                  ><h6 class="mb-1">11. Pro Video Editor 4K</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i7-13700K, Z790, 64GB DDR5, 2TB NVMe Gen4 (Scratch
+                    Disk), RTX 4070 Ti.</span
+                  ><span class="text-neon fw-bold small">Rp 25.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc12"
+                  value="3D Render Workstation"
+                  data-price="45000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc12"
+                  ><h6 class="mb-1">12. 3D Render Workstation</h6>
+                  <span class="desc-spec opacity-50"
+                    >AMD Ryzen 9 7950X, 128GB RAM, 4TB Storage, Dual RTX 4080
+                    (Multi-GPU Config).</span
+                  ><span class="text-neon fw-bold small">Rp 45.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc13"
+                  value="AI Deep Learning Node"
+                  data-price="75000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc13"
+                  ><h6 class="mb-1">13. AI / Deep Learning Node</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i9-14900K, 128GB DDR5, Dual RTX 4090 24GB NVLink, PSU
+                    1600W Platinum.</span
+                  ><span class="text-neon fw-bold small">Rp 75.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc14"
+                  value="Mini-ITX Premium SFF"
+                  data-price="22000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc14"
+                  ><h6 class="mb-1">14. Mini-ITX SFF Premium</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 5 7600, B650I, 32GB DDR5, 2TB NVMe, RTX 4070, SFX
+                    750W, A4-H2O Case.</span
+                  ><span class="text-neon fw-bold small">Rp 22.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc15"
+                  value="All-White Aesthetic Build"
+                  data-price="24000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc15"
+                  ><h6 class="mb-1">15. All-White Aesthetic Build</h6>
+                  <span class="desc-spec opacity-50"
+                    >Core i5-13600K, Z790 White, 32GB DDR5 White RGB, RTX 4070
+                    White, NZXT/Lian Li O11.</span
+                  ><span class="text-neon fw-bold small">Rp 24.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc16"
+                  value="Stealth Blackout Build"
+                  data-price="18000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc16"
+                  ><h6 class="mb-1">16. Stealth / Blackout Build</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ryzen 7 7700X, B650 Tomahawk, 32GB Non-RGB, RTX 4070,
+                    Cooler Noctua NH-D15.</span
+                  ><span class="text-neon fw-bold small">Rp 18.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc17"
+                  value="Dual-System Stream Rig"
+                  data-price="35000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc17"
+                  ><h6 class="mb-1">17. Dual-System Stream Rig</h6>
+                  <span class="desc-spec opacity-50"
+                    >System 1 (Gaming RTX 4070Ti) & System 2 (Encoding Elgato
+                    4K60) dalam 1 Casing Besar.</span
+                  ><span class="text-neon fw-bold small">Rp 35.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc18"
+                  value="Custom Hard-Tube Liquid"
+                  data-price="8000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc18"
+                  ><h6 class="mb-1">18. Custom Hard-Tube Jasa</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa tekuk Pipa Akrilik/PETG, pasang Waterblock CPU & GPU,
+                    Distro Plate, coolant routing.</span
+                  ><span class="text-neon fw-bold small">Rp 8.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc19"
+                  value="Open Frame Wall-Mount"
+                  data-price="25000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc19"
+                  ><h6 class="mb-1">19. Open Frame Wall-Mount</h6>
+                  <span class="desc-spec opacity-50"
+                    >Thermaltake Core P3, Core i7, RTX 4070 Ti Vertical Mount,
+                    Custom Sleeved Cables.</span
+                  ><span class="text-neon fw-bold small">Rp 25.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="pc20"
+                  value="Anime Themed Build"
+                  data-price="21000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="pc20"
+                  ><h6 class="mb-1">20. Anime / Themed Build</h6>
+                  <span class="desc-spec opacity-50"
+                    >Custom Decal Case, AIO Cooler Layar LCD GIF, Kabel RGB
+                    Strimer Plus V2, Pink/White Theme.</span
+                  ><span class="text-neon fw-bold small">Rp 21.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-server" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv1"
+                  value="SAMP Roleplay Base"
+                  data-price="500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv1"
+                  ><h6 class="mb-1">1. SAMP Roleplay Base Setup</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi script PAWN, setting MySQL Database, konfigurasi
+                    server.cfg & plugins.</span
+                  ><span class="text-neon fw-bold small">Rp 500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv2"
+                  value="SAMP Advanced Anti-Cheat"
+                  data-price="800000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv2"
+                  ><h6 class="mb-1">2. SAMP Advanced Anti-Cheat</h6>
+                  <span class="desc-spec opacity-50"
+                    >Integrasi Nex-AC, server-side weapon data, perlindungan
+                    DDoS & flood layer 7.</span
+                  ><span class="text-neon fw-bold small">Rp 800.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv3"
+                  value="Minecraft Network Hub"
+                  data-price="1000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv3"
+                  ><h6 class="mb-1">3. Minecraft Network Hub</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setup BungeeCord/Velocity, 1 Hub + 2 Survival Node,
+                    GeyserMC (Crossplay Mobile).</span
+                  ><span class="text-neon fw-bold small">Rp 1.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv4"
+                  value="FiveM Roleplay Server"
+                  data-price="1200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv4"
+                  ><h6 class="mb-1">4. FiveM Roleplay Server</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi QBCore/ESX framework, setup database MariaDB,
+                    konfigurasi base resource.</span
+                  ><span class="text-neon fw-bold small">Rp 1.200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv5"
+                  value="Discord Custom Bot"
+                  data-price="500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv5"
+                  ><h6 class="mb-1">5. Discord Custom Bot Hosting</h6>
+                  <span class="desc-spec opacity-50"
+                    >Deployment script L.U.N.A (discord.py/JS) 24/7 di VPS,
+                    setup PM2 / systemd service.</span
+                  ><span class="text-neon fw-bold small">Rp 500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv6"
+                  value="Linux Web Server"
+                  data-price="400000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv6"
+                  ><h6 class="mb-1">6. Linux Web Server (LEMP)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Konfigurasi Nginx/Apache, optimasi PHP-FPM, instalasi
+                    Sertifikat SSL (HTTPS).</span
+                  ><span class="text-neon fw-bold small">Rp 400.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv7"
+                  value="Database Optimization"
+                  data-price="600000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv7"
+                  ><h6 class="mb-1">7. Database Server Optimization</h6>
+                  <span class="desc-spec opacity-50"
+                    >Tuning my.cnf MySQL, setup Master-Slave Replication,
+                    perbaikan query lambat.</span
+                  ><span class="text-neon fw-bold small">Rp 600.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv8"
+                  value="Home NAS TrueNAS"
+                  data-price="1500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv8"
+                  ><h6 class="mb-1">8. Home NAS Build (TrueNAS)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Perakitan Hardware NAS, konfigurasi ZFS Pool / RAID 1/5/10,
+                    setup SMB/NFS share.</span
+                  ><span class="text-neon fw-bold small">Rp 1.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv9"
+                  value="Plex Media Server"
+                  data-price="500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv9"
+                  ><h6 class="mb-1">9. Plex Media Server</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi Plex di Ubuntu/Docker, setup hardware transcoding
+                    via GPU/Intel QuickSync.</span
+                  ><span class="text-neon fw-bold small">Rp 500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv10"
+                  value="VPS Migration Pella/FPS"
+                  data-price="300000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv10"
+                  ><h6 class="mb-1">10. VPS Migration (Pella/FPS)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Migrasi data server dari provider lama ke VPS Pella/FPS
+                    tanpa data loss dan downtime minim.</span
+                  ><span class="text-neon fw-bold small">Rp 300.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv11"
+                  value="Mikrotik Basic Config"
+                  data-price="600000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv11"
+                  ><h6 class="mb-1">11. Mikrotik Router Basic Config</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setup WAN/LAN, DHCP Server, Firewall NAT dasar, dan
+                    Bandwidth limit (Simple Queue).</span
+                  ><span class="text-neon fw-bold small">Rp 600.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv12"
+                  value="Mikrotik Load Balancing"
+                  data-price="1200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv12"
+                  ><h6 class="mb-1">12. Mikrotik Load Balance/Failover</h6>
+                  <span class="desc-spec opacity-50"
+                    >Gabung 2 ISP (Metode PCC/ECMP) agar internet kantor stabil
+                    dan auto-backup jika putus.</span
+                  ><span class="text-neon fw-bold small">Rp 1.200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv13"
+                  value="Mikrotik Hotspot Radius"
+                  data-price="1000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv13"
+                  ><h6 class="mb-1">13. Mikrotik Hotspot & Radius</h6>
+                  <span class="desc-spec opacity-50"
+                    >Konfigurasi Login Page WiFi Cafe, User Manager, sistem
+                    voucher generation (Mikhmon).</span
+                  ><span class="text-neon fw-bold small">Rp 1.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv14"
+                  value="Office LAN Routing"
+                  data-price="2000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv14"
+                  ><h6 class="mb-1">14. Office LAN Routing & Switch</h6>
+                  <span class="desc-spec opacity-50"
+                    >Penarikan UTP Cat6, terminasi RJ45/Patch Panel, setup VLAN
+                    di Manageable Switch.</span
+                  ><span class="text-neon fw-bold small">Rp 2.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv15"
+                  value="Wireless PTP Link"
+                  data-price="1500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv15"
+                  ><h6 class="mb-1">15. Wireless PTP / PTMP Link</h6>
+                  <span class="desc-spec opacity-50"
+                    >Tembak sinyal WiFi antar gedung pakai antena
+                    Ubiquiti/Mikrotik (Jarak 1-5 KM).</span
+                  ><span class="text-neon fw-bold small">Rp 1.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv16"
+                  value="Wireguard VPN Tunnel"
+                  data-price="500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv16"
+                  ><h6 class="mb-1">16. Wireguard / OpenVPN Tunnel</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setup VPN remote access aman untuk WFH agar karyawan bisa
+                    akses data/printer kantor.</span
+                  ><span class="text-neon fw-bold small">Rp 500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv17"
+                  value="CCTV NVR IP Camera"
+                  data-price="2500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv17"
+                  ><h6 class="mb-1">17. CCTV NVR IP Camera Setup</h6>
+                  <span class="desc-spec opacity-50"
+                    >Konfigurasi NVR, tarikan kabel LAN PoE ke 4-8 titik IP
+                    Camera, setup remote view di HP.</span
+                  ><span class="text-neon fw-bold small">Rp 2.500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv18"
+                  value="Zabbix Monitoring"
+                  data-price="1000000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv18"
+                  ><h6 class="mb-1">18. Zabbix / Grafana Monitoring</h6>
+                  <span class="desc-spec opacity-50"
+                    >Pembuatan Dashboard live monitoring CPU, RAM, Network
+                    Traffic untuk 5+ Node VPS.</span
+                  ><span class="text-neon fw-bold small">Rp 1.000.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv19"
+                  value="Proxmox Hypervisor"
+                  data-price="800000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv19"
+                  ><h6 class="mb-1">19. Proxmox Virtual Environment</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi OS Proxmox VE, pembuatan VM/LXC container, dan
+                    virtual network bridge.</span
+                  ><span class="text-neon fw-bold small">Rp 800.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="sv20"
+                  value="Cloudflare DDoS Config"
+                  data-price="400000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="sv20"
+                  ><h6 class="mb-1">20. Cloudflare DDoS Protection</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setup DNS Cloudflare, WAF rules, Rate Limiting untuk
+                    mencegah serangan bot layer 7.</span
+                  ><span class="text-neon fw-bold small">Rp 400.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-tuning" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu1"
+                  value="Win 10 Clean Install"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu1"
+                  ><h6 class="mb-1">1. Win 10 Clean Install + Driver</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi OS murni, Update driver Motherboard/VGA,
+                    instalasi Visual C++ Redist & DirectX.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu2"
+                  value="Win 11 Pro Clean Install"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu2"
+                  ><h6 class="mb-1">2. Win 11 Pro Clean Install</h6>
+                  <span class="desc-spec opacity-50"
+                    >Bypass TPM 2.0 (jika PC lama), update Windows terbaru,
+                    debloat aplikasi bawaan.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu3"
+                  value="Linux Desktop Setup"
+                  data-price="200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu3"
+                  ><h6 class="mb-1">3. Linux Desktop (Ubuntu/Mint)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi OS Linux harian, partisi ext4/Btrfs, setup driver
+                    Proprietary Nvidia/AMD.</span
+                  ><span class="text-neon fw-bold small">Rp 200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu4"
+                  value="Dual-Boot OS Setup"
+                  data-price="300000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu4"
+                  ><h6 class="mb-1">4. Dual-Boot OS Setup</h6>
+                  <span class="desc-spec opacity-50"
+                    >Konfigurasi GRUB Bootloader aman, partisi UEFI terpisah
+                    untuk Windows 11 dan Linux.</span
+                  ><span class="text-neon fw-bold small">Rp 300.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu5"
+                  value="NTFS Storage Tuning"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu5"
+                  ><h6 class="mb-1">5. NTFS Storage Optimization</h6>
+                  <span class="desc-spec opacity-50"
+                    >Tweaking registry matikan indexing berlebih, defrag HDD /
+                    TRIM SSD manual system.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu6"
+                  value="Extreme Debloating"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu6"
+                  ><h6 class="mb-1">6. Extreme Windows Debloating</h6>
+                  <span class="desc-spec opacity-50"
+                    >Hapus Telemetry, Cortana, hapus Xbox Game Bar & Edge via
+                    script PowerShell.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu7"
+                  value="BIOS Flash Update"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu7"
+                  ><h6 class="mb-1">7. Motherboard BIOS Flash</h6>
+                  <span class="desc-spec opacity-50"
+                    >Update firmware ke versi stabil terbaru untuk perbaiki bug
+                    RAM atau support CPU baru.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu8"
+                  value="CPU Safe Overclock"
+                  data-price="300000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu8"
+                  ><h6 class="mb-1">8. CPU Safe Overclocking</h6>
+                  <span class="desc-spec opacity-50"
+                    >Peningkatan Core Clock di BIOS, tes kestabilan Cinebench
+                    R23 (Khusus CPU Intel K / Ryzen).</span
+                  ><span class="text-neon fw-bold small">Rp 300.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu9"
+                  value="CPU Undervolting"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu9"
+                  ><h6 class="mb-1">9. CPU Undervolting</h6>
+                  <span class="desc-spec opacity-50"
+                    >Turunkan voltase Core via PBO/ThrottleStop agar suhu turun
+                    5-10°C tanpa kurangi FPS.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu10"
+                  value="GPU Overclock & Curve"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu10"
+                  ><h6 class="mb-1">10. GPU Overclock & Fan Curve</h6>
+                  <span class="desc-spec opacity-50"
+                    >Tuning via MSI Afterburner, naikkan Core/Memory Clock +
+                    Custom kurva kipas agar adem.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu11"
+                  value="GPU Undervolting"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu11"
+                  ><h6 class="mb-1">11. GPU Undervolting (V-F Curve)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Hemat konsumsi daya VGA hingga 30W+ dan cegah thermal
+                    throttling saat gaming lama.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu12"
+                  value="RAM XMP/EXPO Enable"
+                  data-price="50000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu12"
+                  ><h6 class="mb-1">12. RAM XMP/EXPO Activation</h6>
+                  <span class="desc-spec opacity-50"
+                    >Aktifkan profile RAM pabrik di BIOS (dari base 2133MHz ke
+                    speed 3200/3600/6000MHz).</span
+                  ><span class="text-neon fw-bold small">Rp 50.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu13"
+                  value="RAM Manual Timing"
+                  data-price="400000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu13"
+                  ><h6 class="mb-1">13. RAM Manual Timing Tightening</h6>
+                  <span class="desc-spec opacity-50"
+                    >Overclock sub-timings sekunder & tersier manual untuk
+                    angkat FPS 1% Low di game kompetitif.</span
+                  ><span class="text-neon fw-bold small">Rp 400.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu14"
+                  value="OBS Stream Config"
+                  data-price="200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu14"
+                  ><h6 class="mb-1">14. OBS Studio Stream Config</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setting NVENC/AMF Encoder, optimalisasi Bitrate sesuai
+                    speed internet, setup canvas 60fps.</span
+                  ><span class="text-neon fw-bold small">Rp 200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu15"
+                  value="Network Latency Tweak"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu15"
+                  ><h6 class="mb-1">15. Network Ping & Latency Tweak</h6>
+                  <span class="desc-spec opacity-50"
+                    >Optimasi TCP/IP parameters, rubah DNS ke Cloudflare
+                    1.1.1.1, matikan Nagle's Algorithm.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu16"
+                  value="Adobe Workflow Tweak"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu16"
+                  ><h6 class="mb-1">16. Adobe CC Workflow Tweak</h6>
+                  <span class="desc-spec opacity-50"
+                    >Setting Scratch Disk, alokasi RAM maksimal, aktifkan GPU
+                    Acceleration di Premiere.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu17"
+                  value="Developer IDE Setup"
+                  data-price="200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu17"
+                  ><h6 class="mb-1">17. Developer IDE Setup</h6>
+                  <span class="desc-spec opacity-50"
+                    >Instalasi VS Code, setup compiler MinGW C++, Python PATH,
+                    Node.js, dan Git Bash.</span
+                  ><span class="text-neon fw-bold small">Rp 200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu18"
+                  value="Game Specific Config"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu18"
+                  ><h6 class="mb-1">18. Game-Specific Config (Valo/CS2)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Edit file config internal (.ini/.cfg) matikan shadow
+                    rahasia dan unlock FPS cap limit.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu19"
+                  value="Malware Deep Scan"
+                  data-price="200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu19"
+                  ><h6 class="mb-1">19. Malware & Virus Deep Scan</h6>
+                  <span class="desc-spec opacity-50"
+                    >Scan via Safe Mode Kaspersky/Malwarebytes, hapus trojan
+                    miner dan perbaiki registry OS.</span
+                  ><span class="text-neon fw-bold small">Rp 200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="tu20"
+                  value="Data Recovery Attempt"
+                  data-price="300000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="tu20"
+                  ><h6 class="mb-1">20. Data Recovery Attempt</h6>
+                  <span class="desc-spec opacity-50"
+                    >Usaha penyelamatan file terhapus/terformat dari
+                    HDD/Flashdisk via software forensic.</span
+                  ><span class="text-neon fw-bold small">Rp 300.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-repair" role="tabpanel">
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr1"
+                  value="Desktop Deep Cleaning"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr1"
+                  ><h6 class="mb-1">1. Desktop Deep Cleaning</h6>
+                  <span class="desc-spec opacity-50"
+                    >Bongkar total PC, kuas kipas casing, bersihkan heatsink
+                    CPU, lap debu PSU & Motherboard.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr2"
+                  value="Laptop Deep Cleaning"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr2"
+                  ><h6 class="mb-1">2. Laptop Deep Cleaning</h6>
+                  <span class="desc-spec opacity-50"
+                    >Bongkar casing bawah laptop, bersihkan debu penyumbat sirip
+                    heatsink dan kipas blower.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr3"
+                  value="Standard Repasting"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr3"
+                  ><h6 class="mb-1">3. Standard Repasting</h6>
+                  <span class="desc-spec opacity-50"
+                    >Hapus pasta lama, aplikasikan Arctic MX-4 / Deepcool Z5
+                    pada CPU PC atau Laptop.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr4"
+                  value="Premium Repasting"
+                  data-price="200000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr4"
+                  ><h6 class="mb-1">4. Premium Repasting</h6>
+                  <span class="desc-spec opacity-50"
+                    >Aplikasi Kryonaut / Noctua NT-H1 untuk PC/Laptop gaming
+                    yang cepat overheat.</span
+                  ><span class="text-neon fw-bold small">Rp 200.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr5"
+                  value="Extreme Liquid Metal"
+                  data-price="400000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr5"
+                  ><h6 class="mb-1">5. Extreme Liquid Metal</h6>
+                  <span class="desc-spec opacity-50"
+                    >Aplikasi Conductonaut, isolasi kapasitor CPU pakai kuteks
+                    khusus (Thermal drop parah).</span
+                  ><span class="text-neon fw-bold small">Rp 400.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr6"
+                  value="VGA Deep Clean Repaste"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr6"
+                  ><h6 class="mb-1">6. VGA Deep Clean & Repaste</h6>
+                  <span class="desc-spec opacity-50"
+                    >Bongkar heatsink VGA Card, ganti Thermal Pad VRAM (Gelid),
+                    dan pasta chip GPU.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr7"
+                  value="SSD NVMe Upgrade Kloning"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr7"
+                  ><h6 class="mb-1">7. SSD NVMe Upgrade & Kloning</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa pasang SSD NVMe, pindahkan OS Windows dari HDD lama ke
+                    SSD baru 1:1.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr8"
+                  value="HDD to SSD SATA Migration"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr8"
+                  ><h6 class="mb-1">8. HDD to SSD SATA Migration</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa pasang SSD 2.5", optimalisasi OS untuk SSD (matikan
+                    defrag otomatis), kloning data.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr9"
+                  value="RAM Upgrade Installation"
+                  data-price="50000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr9"
+                  ><h6 class="mb-1">9. RAM Upgrade Installation</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa pasang RAM SODIMM (Laptop) / U-DIMM (PC), cek
+                    dual-channel berjalan normal.</span
+                  ><span class="text-neon fw-bold small">Rp 50.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr10"
+                  value="Laptop Hinge Fabrication"
+                  data-price="350000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr10"
+                  ><h6 class="mb-1">10. Laptop Hinge Fabrication</h6>
+                  <span class="desc-spec opacity-50"
+                    >Rekonstruksi dudukan baut engsel laptop yang hancur dengan
+                    lem besi/epoxy super kuat.</span
+                  ><span class="text-neon fw-bold small">Rp 350.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr11"
+                  value="LCD Screen Replacement"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr11"
+                  ><h6 class="mb-1">11. LCD Screen Replacement</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa bongkar bezel, ganti panel LCD pecah/dead
+                    pixel/bergaris, pastikan kabel fleksibel aman.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr12"
+                  value="Keyboard Replace Tanam"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr12"
+                  ><h6 class="mb-1">12. Keyboard Replace (Tanam)</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa lelehkan paku plastik keyboard tanam (ultrabook) dan
+                    solder ulang presisi.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr13"
+                  value="PSU Voltage Test"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr13"
+                  ><h6 class="mb-1">13. Power Supply Voltage Test</h6>
+                  <span class="desc-spec opacity-50"
+                    >Diagnostik pin pakai PSU Tester digital untuk pastikan
+                    tegangan 12V, 5V, 3.3V stabil.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr14"
+                  value="BSOD Deep Diagnostic"
+                  data-price="150000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr14"
+                  ><h6 class="mb-1">14. BSOD Deep Diagnostic</h6>
+                  <span class="desc-spec opacity-50"
+                    >Analisa file Minidump, tes MemTest86 untuk cari hardware
+                    yang rusak penyebab Blue Screen.</span
+                  ><span class="text-neon fw-bold small">Rp 150.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr15"
+                  value="Water Damage Sonic Bath"
+                  data-price="500000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr15"
+                  ><h6 class="mb-1">15. Water Damage Sonic Bath</h6>
+                  <span class="desc-spec opacity-50"
+                    >Cuci Motherboard laptop korosi akibat air pakai cairan IPA
+                    99% dan Ultrasonic Cleaner.</span
+                  ><span class="text-neon fw-bold small">Rp 500.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr16"
+                  value="Cable Management Rework"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr16"
+                  ><h6 class="mb-1">16. Cable Management Rework</h6>
+                  <span class="desc-spec opacity-50"
+                    >Bongkar seluruh kabel PC lama, rute ulang di belakang
+                    casing, ikat pakai zip-tie rapi.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr17"
+                  value="Battery CMOS Replacement"
+                  data-price="50000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr17"
+                  ><h6 class="mb-1">17. Battery CMOS Replacement</h6>
+                  <span class="desc-spec opacity-50"
+                    >Ganti baterai kancing CR2032 di motherboard PC/Laptop yang
+                    jam dan tanggalnya sering error.</span
+                  ><span class="text-neon fw-bold small">Rp 50.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr18"
+                  value="Laptop Battery Replacement"
+                  data-price="100000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr18"
+                  ><h6 class="mb-1">18. Laptop Battery Replace</h6>
+                  <span class="desc-spec opacity-50"
+                    >Jasa cabut baterai tanam laptop yang kembung/bocor dan
+                    pasang unit baterai baru original.</span
+                  ><span class="text-neon fw-bold small">Rp 100.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr19"
+                  value="Broken Port Solder"
+                  data-price="250000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr19"
+                  ><h6 class="mb-1">19. Broken Port Solder Fix</h6>
+                  <span class="desc-spec opacity-50"
+                    >Solder ulang / cabut pasang konektor USB, Jack Audio 3.5mm,
+                    atau DC charger yang longgar.</span
+                  ><span class="text-neon fw-bold small">Rp 250.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <input
+                  type="checkbox"
+                  class="btn-check calc-check"
+                  id="hr20"
+                  value="Buzzer Beep Code Check"
+                  data-price="50000"
+                /><label class="item-card p-3 w-100 text-start pe-5" for="hr20"
+                  ><h6 class="mb-1">20. Beep Code Diagnostic</h6>
+                  <span class="desc-spec opacity-50"
+                    >Deteksi kerusakan hardware (No Display) berdasarkan pola
+                    bunyi beep dari motherboard.</span
+                  ><span class="text-neon fw-bold small">Rp 50.000</span
+                  ><i
+                    class="bi bi-check-circle-fill fs-4 check-icon opacity-25"
+                  ></i
+                ></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="mb-3">
+          <span class="text-neon">Step 3:</span> Data Pemesan
+        </h4>
+        <div class="glass-card p-4 p-md-5 mb-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label opacity-75 small">Nama Lengkap</label>
+              <input
+                type="text"
+                class="form-control bg-transparent text-white border-secondary"
+                id="custName"
+                placeholder="Masukkan nama Anda"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label opacity-75 small"
+                >Nomor WhatsApp Aktif</label
+              >
+              <input
+                type="text"
+                class="form-control bg-transparent text-white border-secondary"
+                id="custWa"
+                placeholder="0812xxxxxx"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label opacity-75 small"
+                >Catatan Keluhan / Spesifikasi Khusus</label
+              >
+              <textarea
+                class="form-control bg-transparent text-white border-secondary"
+                id="custNotes"
+                rows="3"
+                placeholder="Contoh: Saya mau pesan The Developer Workstation tapi RAM-nya minta dinaikkan jadi 64GB..."
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <div class="form-check mt-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="agreeTerms"
+                  required
+                />
+                <label
+                  class="form-check-label opacity-75 small"
+                  for="agreeTerms"
+                >
+                  Saya memahami bahwa harga ini adalah estimasi awal. Harga
+                  final (termasuk ketersediaan *part* hardware asli) akan
+                  diakumulasikan setelah konsultasi WhatsApp.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container pb-4">
+      <div
+        class="sticky-bottom-panel p-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <div>
+          <h6 class="mb-1 opacity-75">Total Estimasi Sementara:</h6>
+          <h2 class="text-neon fw-bold mb-0" id="totalDisplay">Rp 0</h2>
+          <p class="small text-muted mb-0 mt-1" id="itemsCount">
+            0 Layanan dipilih.
+          </p>
+        </div>
+        <div class="mt-3 mt-md-0 d-flex gap-3">
+          <button
+            type="button"
+            class="btn btn-outline-danger px-4"
+            id="resetBtn"
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            class="btn btn-futuristic px-5 py-3"
+            id="submitWaBtn"
+            style="background: #25d366; border-color: #25d366; color: white"
+          >
+            <i class="bi bi-whatsapp me-2"></i> Kirim Pesanan ke WA
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center mt-5 pt-3">
+      <div class="container border-top border-secondary pt-4 pb-4">
+        <p class="mb-2">LUNAR TECH & PC SOLUTIONS</p>
+        <p class="mb-0 opacity-50 small">
+          &copy; 2026 UTS Pemrograman Web (F) | Muhammad Zainal Arifin | NPM
+          24081010068
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS("particles-order", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: "#00f2fe" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: {
+            value: 3,
+            random: true,
+          } /* Ini yang bikin partikelnya jadi kecil elegan */,
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#00f2fe",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      const checkboxes = document.querySelectorAll(".calc-check");
+      const totalDisplay = document.getElementById("totalDisplay");
+      const itemsCount = document.getElementById("itemsCount");
+      const resetBtn = document.getElementById("resetBtn");
+      const submitWaBtn = document.getElementById("submitWaBtn");
+
+      const formatRupiah = (number) => {
+        return new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+        }).format(number);
+      };
+
+      function calculateTotal() {
+        let total = 0;
+        let count = 0;
+
+        checkboxes.forEach((box) => {
+          if (box.checked) {
+            total += parseInt(box.getAttribute("data-price"));
+            count++;
+          }
+        });
+
+        totalDisplay.innerText = formatRupiah(total);
+        itemsCount.innerText = `${count} Layanan dipilih.`;
+      }
+
+      checkboxes.forEach((box) =>
+        box.addEventListener("change", calculateTotal),
+      );
+
+      resetBtn.addEventListener("click", () => {
+        checkboxes.forEach((box) => (box.checked = false));
+        calculateTotal();
+      });
+
+      submitWaBtn.addEventListener("click", () => {
+        const name = document.getElementById("custName").value;
+        const wa = document.getElementById("custWa").value;
+        const notes = document.getElementById("custNotes").value;
+        const agree = document.getElementById("agreeTerms").checked;
+
+        if (!name || !wa || !agree) {
+          alert(
+            "Mohon lengkapi Nama, Nomor WA, dan centang persetujuan di Step 3!",
+          );
+          return;
+        }
+
+        let selectedItems = [];
+        let totalVal = 0;
+        checkboxes.forEach((box) => {
+          if (box.checked) {
+            selectedItems.push(`- ${box.value}`);
+            totalVal += parseInt(box.getAttribute("data-price"));
+          }
+        });
+
+        if (selectedItems.length === 0) {
+          alert("Anda belum memilih layanan apapun di Step 2!");
+          return;
+        }
+
+        let waText = `Halo *Lunar Tech*, saya ingin memesan layanan dengan detail berikut:\n\n`;
+        waText += `*Data Pelanggan:*\nNama: ${name}\nNo WA: ${wa}\n\n`;
+        waText += `*Layanan yang Dipilih:*\n${selectedItems.join("\n")}\n\n`;
+        waText += `*Estimasi Total:* ${formatRupiah(totalVal)}\n\n`;
+        waText += `*Catatan Tambahan:*\n${notes ? notes : "-Tidak ada-"}\n\n`;
+        waText += `Mohon info selanjutnya, terima kasih.`;
+
+        const waNumber = "6200000000"; // Sesuai dengan nomor WA yang kamu berikan sebelumnya
+        const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+
+        window.open(waUrl, "_blank");
+      });
+    </script>
+  </body>
+</html>
